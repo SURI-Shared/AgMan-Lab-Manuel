@@ -1,4 +1,4 @@
-1. **enx70886b8bf09c: flags=4163<UP,BROACAN BUS Communication Configuration for Ubuntu20/home/agman1/MuJoCo_RL_UR5/UR5+gripper**
+# 1. **enx70886b8bf09c: flags=4163<UP,BROACAN BUS Communication Configuration for Ubuntu20/home/agman1/MuJoCo_RL_UR5/UR5+gripper**
 
 **Problem:** when we start to build up communication between WAM computer(system installed with Ubuntu20) and Barrett robot arm, we may meet this problem that the CAN port can’t be found. Such as the shot screen below.
 
@@ -36,7 +36,7 @@ Then follow the notification step by step.
 
 ![Image](https://lh7-us.googleusercontent.com/EBwXWWA-kz-RmWuwp-xhOCNJkc4qneanehLntbIWXNs6qGwDJqwmXJ_6v9fifdReMF_457FodYN9JHwEdoIYOXVU-E9KuE7bFGuUuuvVkHSVD5qhUDPJG5TKlzsUdwCUtFukbd02TFRV5U0_WSxKjQ)
 
-1. **Communication problem for CAN - USB adapter** 
+# 2.**Communication problem for CAN - USB adapter** 
 
 When you need another computer(not WAM PC) to control the Barrett Arm or hand, you need to use a CAN-USB adapter to build up communication between your PC and WAM robot unless your computer is equipped with a PCI card. The instructions for installing the related drives, libraries, and packages can be found in the links below:
 
@@ -98,7 +98,7 @@ sudo -s
 
 After that, you can control the Barrett robot on your own computer. That’s all. 
 
-**3. Problem and correct related operations for Vicon system in Agman Lab**
+# **3. Problem and correct related operations for Vicon system in Agman Lab**
 
 Sometimes when we decide to make the Initialization for the Vicon system and reset the cartesian coordinate system, we need to use *ViconTracker**(now the newest version is 3.9)* to make the configuration for the Vicon system. Firstly we should open the software, then find the page as below:
 
@@ -215,7 +215,7 @@ If your computer is high-performance, you should decrease the variable ‘MESSAG
 
 After that, you need to rebuild & re-install the libbarrett library as we recorded in the ‘**Communication problem for CAN - USB adapter****.’** Then you can run the script programmed by yourself successfully. 
 
-**Mujoco and mujoco-py installation instruction(Python 3.X Version)**
+# **Mujoco and mujoco-py installation instruction(Python 3.X Version)**
 
 (Note: Don't install other versions with other python versions!)
 
@@ -276,7 +276,6 @@ export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so
    source ~/.bashrc
    ```
 
-   
 6. Test that the library is installed by going into:
 
  	cd ~/.mujoco/mujoco210/bin
@@ -373,7 +372,7 @@ python3 setting_state.py
 pip install "cython<3"
 ```
 
-**MSI Laptop Nvidia Driver problem for multi-monitors display solution:**
+# **MSI Laptop Nvidia Driver problem for multi-monitors display solution:**
 
 [**Disabling secure boot** in BIOS options.](https://www.gigabyte.com/us/Support/FAQ/3001)
 
@@ -413,7 +412,7 @@ sudo apt autoremove
 
 
 
-**UR5e Operation Information:**
+# **UR5e Operation Information:**
 
 1. **Activating the Robot**
 2. **Activating the Gripper**
@@ -565,7 +564,7 @@ To find your own IP address, go to Setting > Network > Ethernet > Settings, and 
 
 Use the IPv4 Address in External Control, and then run the program.
 
-**UR5e Setup on Ubuntu 20.04 and ROS Noetic Instructions:**
+# **UR5e Setup on Ubuntu 20.04 and ROS Noetic Instructions:**
 
 Requirements
 
@@ -626,7 +625,7 @@ Get a VPN and have to ssh into the computer. Needs to learn UNIX first:
 - htop, etc.
 - 
 
-**Environment setup for using Python to control the UR5e**
+# **Environment setup for using Python to control the UR5e**
 
 1. **![img](https://lh7-us.googleusercontent.com/k18r4eIPue8urMRA3-g1i5U6ZtH0VUewQ0vG7pOTWtnFe6JW8VCb1lzHZZd4G40_bSrKCMlyv2ik2wu059t7Jdrsl9ECOg8qr3fsY76XJBAucSNQDJcAUX1kSdMn6KvzZHgrg8JJMAxVZAw99AtGWew)**
 
