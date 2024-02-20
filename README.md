@@ -207,7 +207,7 @@ Sometimes when we are building up communication with the WAM robot arm and contr
 
 Secondly, If everything is okay, then you can check out the file as the following path: 
 
-libbarrett/include/barrett/bus/bus_manager.h:112
+`libbarrett/include/barrett/bus/bus_manager.h:112`
 
 If your computer is high-performance, you should decrease the variable ‘MESSAGE_BUFFER_SIZE‘ less than the primitive value. Or, if your computer is in low-performance, you need to increase the variable larger than the primitive value. For my situation, I decreased the value for that variable and made the script run successfully on my high-performance computer. Here is my setting as below:
 
@@ -225,13 +225,19 @@ After that, you need to rebuild & re-install the libbarrett library as we record
 
 [Anaconda3-2021.04-Linux-x86_64.sh](https://repo.anaconda.com/archive/Anaconda3-2021.04-Linux-x86_64.sh)
 
-​	`sudo chmod +x Anaconda3-2021.04-Linux-x86_64.sh`
+```
+sudo chmod +x Anaconda3-2021.04-Linux-x86_64.sh
+```
 
-​	`./Anaconda3-2021.04-Linux-x86_64.sh`
+```
+./Anaconda3-2021.04-Linux-x86_64.sh
+```
 
 **Step 2 : install git**
 
-​	`sudo apt install git`
+```
+sudo apt install git
+```
 
 **Step 3 : install the mujoco library**
 
@@ -241,75 +247,131 @@ After that, you need to rebuild & re-install the libbarrett library as we record
 
 2. create a hidden folder :
 
- 	`sudo mkdir /home/username/.mujoco`
+ 	sudo mkdir /home/username/.mujoco
 
 ​	(Note: if the folder you created without any permission, use “**sudo chmod a+rwx   /path/to/file**” to give the folder permission)
 
 3. extract the library to the .mujoco folder
 4. include these lines in .bashrc file(terminal command: **gedit ~/.bashrc**):
 
-`export LD_LIBRARY_PATH=/home/user_name/.mujoco/mujoco210/bin`
+```
+export LD_LIBRARY_PATH=/home/user_name/.mujoco/mujoco210/bin
+```
 
-`export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia`
+```
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
+```
 
-`export PATH="$LD_LIBRARY_PATH:$PATH"`
+```
+export PATH="$LD_LIBRARY_PATH:$PATH"
+```
 
-`export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so`
+```
+export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGLEW.so
+```
 
-5. source ~/.bashrc
+
+
+5. ```
+   source ~/.bashrc
+   ```
+
+   
 6. Test that the library is installed by going into:
 
- 		cd ~/.mujoco/mujoco210/bin
+ 	cd ~/.mujoco/mujoco210/bin
 
-​		./simulate ../model/humanoid.xml
+```
+./simulate ../model/humanoid.xml
+```
 
 **Step 4 Install mujoco-py:**
 
-​	`conda create --name mujoco_py python=3.8`
+```
+conda create --name mujoco_py python=3.8
+```
 
-​	`conda activate mujoco_py`
+```
+conda activate mujoco_py
+```
 
-​	`sudo apt update`
+```
+sudo apt update
+```
 
-​	`sudo apt-get install patchelf`
+```
+sudo apt-get install patchelf
+```
 
-​	`sudo apt-get install python3-dev build-essential libssl-dev libffi-dev libxml2-dev` 
+```
+sudo apt-get install python3-dev build-essential libssl-dev libffi-dev libxml2-dev 
+```
 
-​	`sudo apt-get install libxslt1-dev zlib1g-dev libglew1.5 libglew-dev python3-pip`
+```
+sudo apt-get install libxslt1-dev zlib1g-dev libglew1.5 libglew-dev python3-pip
+```
 
-​	`git clone https://github.com/openai/mujoco-py`
+```
+git clone https://github.com/openai/mujoco-py
+```
 
-​	`cd mujoco-py`
+```
+cd mujoco-py
+```
 
-​	`pip install -r requirements.txt`
+```
+pip install -r requirements.txt
+```
 
-​	`pip install -r requirements.dev.txt`
+```
+pip install -r requirements.dev.txt
+```
 
-​	`pip3 install -e . --no-cache`
+```
+pip3 install -e . --no-cache
+```
 
 **Step 5** **reboot your machine**
 
 **Step 6** **run these commands**
 
-​	`conda activate mujoco_py`
+```
+conda activate mujoco_py
+```
 
-​	`sudo apt install libosmescd examplesa6-dev libgl1-mesa-glx libglfw3`
+```
+sudo apt install libosmescd examplesa6-dev libgl1-mesa-glx libglfw3
+```
 
-​	`sudo apt-get install libosmesa6-dev`
+```
+sudo apt-get install libosmesa6-dev
+```
 
-​	`sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so.1` 
+```
+sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so.1 
+```
 
-​	`sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so`
+```
+sudo ln -s /usr/lib/x86_64-linux-gnu/libGL.so
+```
 
-​	`pip3 install -U 'mujoco-py<2.2,>=2.1'`
+```
+pip3 install -U 'mujoco-py<2.2,>=2.1'
+```
 
-​	`cd examples`
+```
+cd examples
+```
 
-​	`python3 setting_state.py`
+```
+python3 setting_state.py
+```
 
 **If you’re getting a Cython error, try:**
 
-`pip install "cython<3"`
+```
+pip install "cython<3"
+```
 
 **MSI Laptop Nvidia Driver problem for multi-monitors display solution:**
 
@@ -319,15 +381,25 @@ After that, you need to rebuild & re-install the libbarrett library as we record
 
 [**CUDA Install Problem Solution Reference.**](https://askubuntu.com/questions/940582/upgrade-or-uninstall-cuda-to-allow-apt-get-to-work) **(Purely delete Cuda packages and Nvidia drivers on Ubuntu)**
 
-`dpkg -l | grep cuda- | awk '{print $2}' | xargs -n1 sudo dpkg --purge`
+```
+dpkg -l | grep cuda- | awk '{print $2}' | xargs -n1 sudo dpkg --purge
+```
 
-`df -h`
+```
+df -h
+```
 
-`sudo apt-get purge nvidia\*`
+```
+sudo apt-get purge nvidia\*
+```
 
-`sudo apt-get -f install`
+```
+sudo apt-get -f install
+```
 
-`sudo apt autoremove`
+```
+sudo apt autoremove
+```
 
 **Mujoco Environment setup in PyCharm:**
 
@@ -413,23 +485,33 @@ Each UR robot is calibrated inside the factory giving exact forward and inverse 
 
 Once you have the drivers setup, use this script to collect the calibration information from the robot. First, make sure the robot is turned on and connected to the network.
 
-`conda deactivate`
+```
+conda deactivate
+```
 
-`$ roslaunch ur_calibration calibration_correction.launch \`
+```
+roslaunch ur_calibration calibration_correction.launch \
 
- `robot_ip:=192.168.1.17`
+robot_ip:=192.168.1.17
+```
 
- `target_filename:="${HOME}/my_robot_calibration.yaml”`
+```
+target_filename:="${HOME}/my_robot_calibration.yaml”
+```
 
 Once you’ve done this, you should find a file named my_robot_calibration.yaml in your home directory. Just leave that there.
 
 Next, open another terminal, and input the following to set-up a connection with the robot:
 
-`$ roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.1.17 kinematics_config:=${HOME}/my_robot_calibration.yaml`
+```
+roslaunch ur_robot_driver ur5e_bringup.launch robot_ip:=192.168.1.17 kinematics_config:=${HOME}/my_robot_calibration.yaml
+```
 
 If you’re getting an error, it is likely the driver was installed incorrectly or you have not properly set-up your root file. To alter your root file, use:
 
-​	`gedit ~/.bashrc`
+```
+gedit ~/.bashrc
+```
 
 This is what my root file looks like:
 
@@ -457,7 +539,9 @@ to add the @realtime lines in the tutorial. Then you can use *Ctrl + O* to save 
 
 My rt kernel doesn’t appear to show up as a choice when doing their
 
-`$ awk -F\' '/menuentry |submenu / {print $1 $2}' /boot/grub/grub.cfg`
+```
+awk -F\' '/menuentry |submenu / {print $1 $2}' /boot/grub/grub.cfg
+```
 
 **I’ll come back to this (^^^) later.**
 
@@ -469,7 +553,9 @@ I was able to connect the UR5e to my computer using the instructions followed in
 
 The UR External Control must be playing for the robot to be able to accept commands. You should be able to connect to the robot and see its position in rviz, but when you try to move the robot using the:
 
-`rosrun ur_robot_driver test_move`
+```
+rosrun ur_robot_driver test_move
+```
 
 You’ll run into issues. If you are having issues with getting the external control to run, be sure that the external control has the Host IP setting as your own computer’s IP.
 
@@ -489,11 +575,17 @@ For Gazebo simulated ur5e:
 
 In separate windows: 
 
-`roslaunch ur_gazebo ur5e_bringup.launch`
+```
+roslaunch ur_gazebo ur5e_bringup.launch
+```
 
-`roslaunch ur5e_moveit_config ur5e_moveit_planning_execution.launch sim:=true`
+```
+roslaunch ur5e_moveit_config ur5e_moveit_planning_execution.launch sim:=true
+```
 
-`rosrun rviz rviz -f world`
+```
+rosrun rviz rviz -f world
+```
 
 Then in Rviz add MotionPlanning and change planning group to manipulator from endeffector
 
