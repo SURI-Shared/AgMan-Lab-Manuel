@@ -10,9 +10,13 @@ $ sudo ip link set can0 up type can restart-ms 100 bitrate 1000000
 
 Then reboot the computer, send the command: 
 
-` cd catkin_ws`
+```
+cd catkin_ws
+```
 
-` roslaunch wam_node wam_node.launch`
+```
+roslaunch wam_node wam_node.launch
+```
 
 ￼
 
@@ -64,19 +68,33 @@ Change the time-delay variable: **timeout_s** in lines 118 and 121 larger than 0
 
 After that, save the file and rebuild the drivers and libraries with the followed instructions:
 
-`cd libbarrett`
+```
+cd libbarrett
+```
 
-`cmake .`
+```
+cmake .
+```
 
-`make`
+```
+make
+```
 
-`sudo make install`
+```
+sudo make install
+```
 
-`cd ~/catkin_wam/src/barrett-ros-pkg`
+```
+cd ~/catkin_wam/src/barrett-ros-pkg
+```
 
-`sudo -s`
+```
+sudo -s
+```
 
-`./build.sh`
+```
+./build.sh
+```
 
 After that, you can control the Barrett robot on your own computer. That’s all. 
 
