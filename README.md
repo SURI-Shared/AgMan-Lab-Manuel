@@ -639,3 +639,19 @@ Add ros noetic path on your pycharm
 **Smart Satellite Actuated Linear Rail**
 
 When utilizing the Vernier Dual Range force sensor, the max force required to move the satellite is 32.78N, but the average force required is close to 18N. This high force point on the track is in the middle of the track, where two ends of aluminum extrusion connect. If the load of the satellite increases, it is likely that this max force would also increase.
+
+# **Solidworks License Information:**
+
+To retrieve your Student Engineering Kit, go to [http://www.SolidWorks.com/SEK](http://www.solidworks.com/SEK)
+
+- Enter your contact information.
+- Check the radio button “Yes” under "I already have a Serial Number that starts with 9020".
+- Select the version and click Request Download.
+- On the next page, Accept the agreement and continue.
+- On the final page, click the Download button to download the SolidWorks Installation Manager.
+- Unzip the files to launch the Installation.
+- Select the option for Individual/On this machine.
+- Install using the following serial number: ***9020005723053384DGRXJY5J***
+- If you need further assistance, please call (888) 285-2284.
+
+*Every once and a while the serial number for the Solidworks License will be updated, so you will need to reach out to the UNM Mechanical Engineering Lab Coordinator (Kyle Webb), for an updated version. Explain that Dr. Fierro has a secondary appointment with the ME Department.
